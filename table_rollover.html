@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            function fun1() {
+                document.getElementById('c').innerHTML = "Discount = 20%"
+            }
+            function fun2() {
+                document.getElementById('cpp').innerHTML = "Discount = 50%"
+            }
+            function fun3() {
+                document.getElementById('java').innerHTML = "Discount = 43%"
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th><label>Books</label></th>
+                <th><label>Information</label></th>
+                <th><label>Discounts</label></th>
+            </tr>
+             <tr>
+                <td><img src="C.jpg" onmouseover="fun1()"></td>
+                <td><label>C language</label></td>
+                <td><label id="c">Discount</label></td>
+            </tr>
+            <tr>
+                <td><img src="CPP.jpg" onmouseover="fun2()"></td>
+                <td><label>C++ language</label></td>
+                <td><label id="cpp">Discount</label></td>
+            </tr>
+            <tr>
+                <td><img src="Java.jpg" onmouseover="fun3()"></td>
+                <td><label>Java language</label></td>
+                <td><label id="java">Discount</label></td>
+            </tr>
+        </table>
+    </body>
+</html>
