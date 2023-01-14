@@ -1,0 +1,31 @@
+<html>
+
+<body>
+<form name="f1">
+
+<input type="text" id="t1"><br><br>
+
+<input type="button" value="Enabled" onclick="fun1()" name="b1">
+
+<input type="button" value="Disabled" onclick="fun2()" name="b2">
+
+</form>
+<script>
+
+function fun1()
+{
+	document.f1.t1.disabled=false;
+
+}
+
+function fun2()
+{
+	document.f1.t1.disabled=true;
+
+}
+
+</script>
+
+</body>
+
+</html>

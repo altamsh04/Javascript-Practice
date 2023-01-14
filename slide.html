@@ -1,0 +1,34 @@
+<html>
+
+<img src="C.jpg" width="300" height="300" name="img1">
+
+<br><input type="button" value="Next" onclick="fun1(+1)"><br>
+
+<br><input type="button" value="Previous" onclick="fun1(-1)"><br>
+
+<body>
+<script>
+
+var pics = new Array("C.jpg","CPP.jpg","Java.jpg");
+var count = 0;
+
+function fun1(a)
+{
+	count = count+a;
+	if(count>(pics.length-1))
+	{
+		count = 0;
+	}
+	if(count<0)
+	{
+		count=pics.length-1;
+	}
+	document.img1.src=pics[count];
+
+}
+
+
+</script>
+</body>
+
+</html>

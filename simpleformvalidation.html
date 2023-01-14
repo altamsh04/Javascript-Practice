@@ -1,0 +1,50 @@
+<html>
+
+<body bgcolor="powderblue">
+
+<form name="f1">
+<center>
+
+<h1>Student Form</h1>
+
+<fieldset>
+	<br><br>
+	Enter your name : <input type="text" name="t1"><br><br>
+	Enter your mobile No : <input type="text" name="t2"><br><br>
+	<input type="button" value="Submit" onclick="fun1()">
+	<br><br>
+</fieldset>
+<center>
+</form>
+
+<script>
+
+function fun1(){
+var nm = document.f1.t1.value;
+var mob = document.f1.t2.value;
+
+
+var reg1 = /[a-z]+\w/igm
+
+var reg2 = /[0-9]+\d/igm
+
+if(nm.match(reg1) && mob.match(reg2) && mob.length == 10)
+{
+	alert("Submit Successful !");
+}
+else
+{
+	alert("Invalid");
+}
+
+}
+
+</script>
+
+
+
+
+</body>
+
+
+</html>

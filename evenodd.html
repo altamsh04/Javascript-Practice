@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+	
+function find() { 	
+	var data = document.form1.text1.value;
+
+	if(data.length == 0) {
+		document.getElementById('h2').innerHTML="Enter Any Number !";
+	}
+	else {
+
+		if (data % 2 == 0) {
+			document.getElementById('h2').innerHTML="Number Is Even !";
+		}
+		else {
+			document.getElementById('h2').innerHTML="Number Is Odd !";		
+		}
+	}
+}
+
+	</script>
+
+
+</head>
+<body>
+
+	<form name="form1">
+		Enter Your Number & Find even or odd :
+		<br><br><input type="text" name="text1"><br><br>
+		<input type="button" name="button1" value="Find" onclick="find()">
+
+		<h2 id="h2"></h2>
+
+	</form>
+
+</body>
+</html>

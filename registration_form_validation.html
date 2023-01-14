@@ -1,0 +1,99 @@
+<html>
+    <body bgcolor="powderblue"; style="align-content: center; font-size: 20; font-style: bold; "><center>
+        <form>
+            <Fieldset>
+            <legend>Form</legend>
+            <h1>Registration Form</h1>   
+            
+            <input type="text" placeholder="First Name" id="fname"><br>
+            <input type="text" placeholder="Middle Name" id="mname"><br>
+            <input type="text" placeholder="Last Name" id="lname"><br>
+            <input type="number" placeholder="Mobile No" id="mob"><br>
+            <input type="text" placeholder="Address" id="add"><br><br>
+
+            <input type="text" id="verpass" placeholder="Warning Messages"><br>
+            <input type="password" placeholder="Password" id="pass" onchange="verify()"><br>
+            <input type="password" placeholder="Confirm password" id="cpass"><br><br>
+            
+            <label>Select Gender</label><br>
+            <input type="radio" name="gender" value="1" id="male">Male
+            <input type="radio" name="gender" value="2" id="female">Female
+            <input type="radio" name="gender" value="3" id="other">Other <br><br>
+            
+            <label>Select Language</label><br>
+            <select id="opt">
+                <option value="0">Hindi</option>
+                <option value="1">Marathi</option>
+                <option value="2">English</option>
+                <option value="3">Japneas</option>
+                <option value="3">Chines</option>
+                <option value="4">Korean</option>
+            </select> 
+            <br><br><br>
+            <input type="button" value="Submit" onclick="main()" style="font-size: 20"> 
+            </Fieldset>
+        </form></center>
+    </body>
+    <head>
+        <script type="text/javascript">
+            document.getElementById('verpass').disabled=true;
+            function verify() {
+               
+                var pass2 = document.getElementById('pass').value;
+                var cpass2 = document.getElementById('cpass').value;
+
+                if(pass2.length <= 8) {
+                    document.getElementById('verpass').value = "Weak strength";
+                }
+                 
+                else {
+                    document.getElementById('verpass').value = "Strong password";
+                }
+            }
+
+            function main() {
+
+                var fname = document.getElementById('fname').value;
+                var mname = document.getElementById('mname').value;
+                var lname = document.getElementById('lname').value;
+                var mob = document.getElementById('mob').value;
+                var add = document.getElementById('add').value;
+                var ch = document.getElementById('opt').value;
+                var pass = document.getElementById('pass').value;
+                var cpass = document.getElementById('cpass').value;
+
+                // var male = document.getElementById('male').value;
+                // var female = document.getElementById('female').value;
+                // var other = document.getElementById('other').value;
+
+                var len = (fname+mname+lname+mob+add+pass+cpass).length;
+
+                var reg = /[0-9]/igm;
+
+                if (len == 0) {
+                    alert("Please Fill All Field !");
+                }
+                else {   
+                    if(fname.match(reg)) {
+                            alert("Please fill alphabets only");
+                        }
+                        if (mname.match(reg)) {
+                            alert("PLease fill alphabets only");
+                        }
+                        if (lname.match(reg)) {
+                            alert("PLease fill alphabets only");
+                        }
+
+                    if(pass == cpass) {
+                        document.getElementById('verpass').value = "Password Match";
+                    }
+                    else {
+                        document.getElementById('verpass').value = "Password Not Match";
+                    }  
+                    
+                }
+                }                 
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body bgcolor="powderblue">
+<form name="f1">
+	<h1>Simple Calculator</h1>
+	<fieldset>
+	<h3>Enter first value : </h3>
+	<input type="text" name="t1"><br><br>
+
+	<h3>Enter second value : </h3>
+	<input type="text" name="t2"><br><br>
+
+	<h3>Enter operator [+ , - , * , /] : </h3>
+	<input type="text" name="op"><br><br>
+
+	<h3>Result : </h3>
+	<input type="text" name="res"><br><br>
+
+	<input type="button" onclick="main()" value="Calculate">
+	</fieldset>
+</form>
+
+<script type="text/javascript">
+	
+function main() {
+		
+	var first = parseInt(document.f1.t1.value);
+	var second = parseInt(document.f1.t2.value);
+	var operator = document.f1.op.value;
+	var result = document.f1.res.value;
+	var data;
+	switch(operator)
+	{
+		case "+":
+		data=first+second;
+		break;
+
+		case "-":
+		data=first-second;
+		break;
+
+		case "*":
+		data=first*second;
+		break;
+
+		case "/":
+		data=first/second;
+		break;
+	}
+	document.f1.res.value=data;
+}
+</script>
+
+</body>
+</html>

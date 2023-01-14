@@ -1,0 +1,24 @@
+<html>
+    <body>
+
+    onkeypress():<br><input type="text" onkeypress="fun1()"><input type="text" id="t1"><br><br>
+    onkeyup():<br><input type="text" onkeyup="fun2()"><input type="text" id="t2"><br><br>
+    onkeydown():<br><input type="text" onkeydown="fun3()"><input type="text" id="t3"><br><br>
+    onkeychange():<br><input type="text" onchange="fun4()"><input type="text" id="t4"><br><br>
+
+    <script>
+            function fun1(){
+                document.getElementById('t1').value="Key pressed in input field";
+            }
+            function fun2(){
+                document.getElementById('t2').value="Key up in input field";
+            }
+            function fun3(){
+                document.getElementById('t3').value="Key down in input field";
+            }
+            function fun4(){
+                document.getElementById('t4').value="Key change in input field";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html><body>
+        <label for="t1">onchange() method :</label><br><br>
+        <input type="text" id="t1" onchange="fun1()"><input type="text" id="r1"><br><br>
+
+        <label for="t2">onfocus() method :</label><br><br>
+        <input type="text" id="t2" onfocus="fun2()"><input type="text" id="r2"><br><br>
+
+        <label for="t3">onblur() method :</label><br><br>
+        <input type="text" id="t3" onblur="fun3()"><input type="text" id="r3"><br><br><br>
+
+        <label for="t4">onmouseover() & onmouseout() method :</label>
+        <h3 onmouseover="fun4()" id="t4" onmouseout="fun5()">Hello JavaScript</h3><input type="text" id="r4"><br><br><br><br>
+
+        <label for="t5">ondbclick() methods :</label>
+        <h3 ondblclick="fun6()">Double Click Me !</h3><input type="text" id="r5"><br><br>
+
+        <script>
+            function fun1(){
+                document.getElementById('r1').value="Text Value Changed";
+            }
+            function fun2(){
+                document.getElementById('r2').value="Text focus gained";
+            }
+            function fun3(){
+                document.getElementById('r3').value="Text focus loss";
+            }
+            function fun4(){
+                document.getElementById('r4').value="Mouse over text";
+            }
+            function fun5(){
+                document.getElementById('r4').value="Mouse out from text";
+            }
+            function fun6(){
+                document.getElementById('r5').value="Doubled click on text";
+            }
+        </script></body></html>

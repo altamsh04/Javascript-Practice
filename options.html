@@ -1,0 +1,44 @@
+<html>
+
+
+<head>
+	<script type="text/javascript">
+		function main() {
+
+			var ch = document.getElementById('s1').value;
+
+			if (ch == 0) {
+				alert("You Select C Language !");
+				document.lang.src="c.jpg";
+			}
+			if (ch == 1) {
+				alert("You Select C++ Language !");
+				document.lang.src="CPP.jpg";
+			}
+			if (ch == 2) {
+				alert("You Select Java Language !");
+				document.lang.src="Java.jpg";
+			}
+			if (ch == 3) {
+				alert("You Select Python Language !");
+				document.lang.src="Python.jpg";
+			}
+		}
+	</script>
+</head>
+
+<body>
+<select id="s1" onchange="main()">
+	<option value="0">C</option>
+	<option value="1">C++</option>
+	<option value="2">Java</option>
+	<option value="3">Python</option>	
+</select>
+<br><br><br>
+<center>
+	<img src="c.jpg" height="200" width="200" name="lang">
+</center>
+	
+
+</body>
+</html>

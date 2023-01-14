@@ -1,0 +1,46 @@
+<html>
+<head><title>Changing Option List Dynamically</title></head>
+<script language="Javascript" type="text/javascript">
+function Displaylist(ElementValue) 
+{ 
+with(document.forms.frm1) 
+{ 
+if(ElementValue==1) 
+{ 
+op1[0].text="WPD" 
+op1[0].value=1 
+op1[1].text="PIC" 
+op1[1].value=2 
+op1[2].text="MATHS" 
+op1[2].value=3 
+
+} 
+if(ElementValue==2) 
+{ 
+op1[0].text="OOP" 
+op1[0].value=1 
+op1[1].text="DSU" 
+op1[1].value=2 
+op1[2].text="DBMS" 
+op1[2].value=3 
+
+} 
+} 
+} 
+</script>
+
+<body>
+<form name="frm1" action="" method="post">
+<select name="op1" size="3">
+<option value=1>WPD 
+<option value=2>PIC 
+<option value=3>MATHS 
+</select>
+<br><br>
+<input type="radio" name="subjects" checked="true" value=1 onclick="Displaylist(this.value)">First Year 
+<input type="radio" name="subjects" value=2 onclick="Displaylist(this.value)">Second Year 
+<br><br>
+<input type="submit" name="Submit" value="Submit">
+</form>
+</body>
+</html>

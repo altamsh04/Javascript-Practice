@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function main() {
+
+			var data = document.getElementById('t1').value;		
+
+		var f = 1;
+		for(var i = 1; i <= data; i++) {
+			f = f * i;
+		}
+		i = i - 1;
+		document.getElementById('para').innerHTML = "Factorial of "+i+" is :" +f;
+	}
+	</script>
+</head>
+
+<body>
+	Enter your number : <input type="text" id="t1"><br><br>
+	<input type="button" value="Find Factorial" onclick="main()"><br><br>
+	<p id="para"></p>
+</body>
+
+</html>

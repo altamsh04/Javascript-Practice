@@ -1,0 +1,28 @@
+<html>
+<body>
+<form name="f1">
+	<h2>Check string or number</h2><br>
+
+	Enter your satement : <br>
+	<input type="text" name="t1"><br><br><br>
+
+	<input type="button" onclick="main()" value="Check"><br><br>
+
+	Result : <br>
+	<input type="text" name="res">
+	</form>
+	<script> 
+	function main() {
+	var str = document.f1.t1.value;
+
+	var reg = /[a-z]/igm;
+	if (str.match(reg)) {
+	document.f1.res.value = "String match !";
+	}
+	else{
+	document.f1.res.value = "Digit match !";
+	}
+	}
+</script>
+</body>
+</html>

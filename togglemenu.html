@@ -1,0 +1,32 @@
+<html>
+
+<style>
+#menu {
+  display: none;
+}
+
+#menu.visible {
+  display: block;
+}
+</style>
+
+<body>
+<div id="menu-container">
+  <button id="menu-toggle">Toggle menu</button>
+  <ul id="menu">
+    <li>C</li>
+    <li>C++</li>
+    <li>JAVA</li>
+  </ul>
+</div>
+
+<script>
+var toggleButton = document.getElementById('menu-toggle');
+var menu = document.getElementById('menu');
+
+toggleButton.addEventListener('click', () => {
+  menu.classList.toggle('visible');
+});
+</script>
+</body>
+</html>

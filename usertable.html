@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>	
+	<script type="text/javascript">
+		function genrate() {
+
+			var data = document.getElementById('t1').value;
+
+
+			if (data.length == 0) {
+
+				document.getElementById('h3').innerHTML="Please enter your number !";
+			}
+			else {
+				for(var i = 1; i <= 10; i++) {
+					var table = data*i;
+
+
+					var win = window.open("","Table","height=450,width=400");
+
+
+					win.document.write("<html>");
+					win.document.write("<body bgcolor=powderblue>");
+					win.document.write(table+"<br>");
+					win.document.write("</body>");
+					win.document.write("</html>");
+				}
+			}
+		}
+	</script>
+</head>
+
+
+
+
+<body bgcolor="powderblue">
+	<h3>Enter your number and genrate table :</h3><br>
+
+	<input type="text" id="t1">
+
+	<input type="button" onclick="genrate()" value="Genrate table">
+
+	<h3 id="h3"></h3>
+</body>
+</html>

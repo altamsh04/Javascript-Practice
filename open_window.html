@@ -1,0 +1,17 @@
+<html>
+<input type="button" onclick="fun1()" value="Open New Window">
+<body>
+<script>
+
+function fun1() {
+var mywin = window.open("My Window","My Window","width=300,height=300");
+mywin.document.write("<html>");
+mywin.document.write("<body>");
+mywin.document.write("<h1>Hello, World!<\/h1>");
+mywin.document.write("<\/body>");
+mywin.document.write("<\/html>");
+mywin.focus();
+}
+</script>
+</body>
+</html>

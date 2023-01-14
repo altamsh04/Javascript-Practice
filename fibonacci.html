@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var prev = 0;
+		var next = 1;
+		var temp;
+
+		for(var i = 0; i<=20; i++) {
+
+			document.write(prev+"<br>");
+			temp = prev + next;
+			prev = next;
+			next = temp;
+		}
+	</script>
+</head>
+</html>
